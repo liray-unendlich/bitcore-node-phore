@@ -1,13 +1,13 @@
 {
-  "name": "bitcore-node-dash",
-  "description": "Full node with extended capabilities using Bitcore and Dash Core",
+  "name": "bitcore-node-colx",
+  "description": "Full node with extended capabilities using Bitcore and colx Core",
   "author": "BitPay <dev@bitpay.com>",
   "version": "3.0.6",
   "main": "./index.js",
-  "repository": "git://github.com/dashevo/bitcore-node-dash.git",
-  "homepage": "https://github.com/dashevo/bitcore-node-dash",
+  "repository": "git://github.com/deltaengine/bitcore-node-colx.git",
+  "homepage": "https://github.com/deltaengine/bitcore-node-colx",
   "bugs": {
-    "url": "https://github.com/dashevo/bitcore-node-dash/issues"
+    "url": "https://github.com/deltaengine/bitcore-node-colx/issues"
   },
   "contributors": [
     {
@@ -27,7 +27,7 @@
     }
   ],
   "bin": {
-    "bitcore-node-dash": "./bin/bitcore-node-dash"
+    "bitcore-node-colx": "./bin/bitcore-node-colx"
   },
   "scripts": {
     "preinstall": "./scripts/download",
@@ -41,13 +41,13 @@
     "bitcoind_test": "./node_modules/.bin/mocha test/services/bitcoind.unit.js"
   },
   "tags": [
-    "dash",
-    "dashd"
+    "colx",
+    "colxd"
   ],
   "dependencies": {
     "async": "^1.3.0",
-    "bitcoind-rpc-dash": "^1.0.1",
-    "bitcore-lib-dash": "^0.15.3",
+    "bitcoind-rpc-colx": "github:deltaengine/bitcoind-rpc-colx",
+    "bitcore-lib-colx": "github:deltaengine/bitcore-lib-colx",
     "body-parser": "^1.13.3",
     "colors": "^1.1.2",
     "commander": "^2.8.1",
@@ -69,7 +69,6 @@
   },
   "devDependencies": {
     "benchmark": "1.0.0",
-    "bitcore-p2p-dash": "^1.1.6",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",
