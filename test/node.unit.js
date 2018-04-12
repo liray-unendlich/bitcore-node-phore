@@ -2,7 +2,7 @@
 
 var should = require('chai').should();
 var sinon = require('sinon');
-var bitcore = require('bitcore-lib-dash');
+var bitcore = require('bitcore-lib-colx');
 var Networks = bitcore.Networks;
 var proxyquire = require('proxyquire');
 var util = require('util');
@@ -202,7 +202,7 @@ describe('Bitcore Node', function() {
         {
           name: 'db',
           module: {
-            dependencies: ['daemon', 'p2p']
+            dependencies: ['daemon']
           }
         },
         {
@@ -210,17 +210,10 @@ describe('Bitcore Node', function() {
           module: {
             dependencies: []
           }
-        },
-        {
-          name: 'p2p',
-          module: {
-            dependencies: []
-          }
         }
       ];
       var order = node.getServiceOrder();
       order[0].name.should.equal('daemon');
-      order[1].name.should.equal('p2p');
       order[2].name.should.equal('db');
       order[3].name.should.equal('chain');
     });

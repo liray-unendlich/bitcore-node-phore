@@ -6,7 +6,7 @@ var path = require('path');
 var EventEmitter = require('events').EventEmitter;
 var should = require('chai').should();
 var crypto = require('crypto');
-var bitcore = require('bitcore-lib-dash');
+var bitcore = require('bitcore-lib-colx');
 var _ = bitcore.deps._;
 var sinon = require('sinon');
 var proxyquire = require('proxyquire');
@@ -644,7 +644,7 @@ describe('Bitcoin Service', function() {
   });
 
   describe('#_wrapRPCError', function() {
-    it('will convert bitcoind-rpc-dash error object into JavaScript error', function() {
+    it('will convert bitcoind-rpc-colx error object into JavaScript error', function() {
       var bitcoind = new BitcoinService(baseConfig);
       var error = bitcoind._wrapRPCError({message: 'Test error', code: -1});
       error.should.be.an.instanceof(errors.RPCError);
@@ -846,7 +846,7 @@ describe('Bitcoin Service', function() {
         }
       };
       var bitcoind = new BitcoinService(config);
-      bitcoind._getNetworkConfigPath().should.equal('testnet3/dash.conf');
+      bitcoind._getNetworkConfigPath().should.equal('testnet3/colx.conf');
     });
     it('will get default rpc port for regtest', function() {
       bitcore.Networks.enableRegtest();
@@ -860,7 +860,7 @@ describe('Bitcoin Service', function() {
         }
       };
       var bitcoind = new BitcoinService(config);
-      bitcoind._getNetworkConfigPath().should.equal('regtest/dash.conf');
+      bitcoind._getNetworkConfigPath().should.equal('regtest/colx.conf');
     });
   });
 
@@ -5137,51 +5137,6 @@ describe('Bitcoin Service', function() {
       });
     });
   });
-
-	describe('#sporksList', function(){
-		it('will call client sporks and give result', function(done){
-			var bitcoind = new BitcoinService(baseConfig);
-
-			bitcoind.nodes.push({
-				client: {
-					spork: function(param, callback){
-						if(param==="show"){
-							callback(null,{result:{
-								"SPORK_2_INSTANTSEND_ENABLED":0,
-								"SPORK_3_INSTANTSEND_BLOCK_FILTERING":0,
-								"SPORK_5_INSTANTSEND_MAX_VALUE":2000,
-								"SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT":0,
-								"SPORK_9_SUPERBLOCKS_ENABLED":0,
-								"SPORK_10_MASTERNODE_PAY_UPDATED_NODES":0,
-								"SPORK_12_RECONSIDER_BLOCKS":0,
-								"SPORK_13_OLD_SUPERBLOCK_FLAG":4070908800,
-								"SPORK_14_REQUIRE_SENTINEL_FLAG":4070908800
-							}
-							})
-						}
-					}
-				}
-			});
-			bitcoind.getSpork(function(err, SporkList) {
-				if (err) {
-					return done(err);
-				}
-				SporkList.should.have.property('sporks');
-				var sporks = SporkList.sporks;
-				Object.keys(sporks).length.should.equal(9);
-				sporks['SPORK_2_INSTANTSEND_ENABLED'].should.equal(0);
-				sporks['SPORK_3_INSTANTSEND_BLOCK_FILTERING'].should.equal(0);
-				sporks['SPORK_5_INSTANTSEND_MAX_VALUE'].should.equal(2000);
-				sporks['SPORK_8_MASTERNODE_PAYMENT_ENFORCEMENT'].should.equal(0);
-				sporks['SPORK_9_SUPERBLOCKS_ENABLED'].should.equal(0);
-				sporks['SPORK_10_MASTERNODE_PAY_UPDATED_NODES'].should.equal(0);
-				sporks['SPORK_12_RECONSIDER_BLOCKS'].should.equal(0);
-				sporks['SPORK_13_OLD_SUPERBLOCK_FLAG'].should.equal(4070908800);
-				sporks['SPORK_14_REQUIRE_SENTINEL_FLAG'].should.equal(4070908800);
-				done();
-			});
-		});
-	});
   describe('#getMNList', function(){
     it('will call client masternode list and give result', function(done){
 	    var bitcoind = new BitcoinService(baseConfig);
