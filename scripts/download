@@ -6,18 +6,18 @@ root_dir="${HOME}/.bitcore"
 platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
 version="1.0.3"
-url="https://github.com/ColossusCoinXT/ColossusCoinXT/releases/download/"
+url="https://github.com/ColossusCoinXT/ColossusCoinXT/releases/download"
 
 if [ "${platform}" == "linux" ]; then
-  tarball_name="v${version}/colx-${version}-x86_64-linux-gnu.tar.gz";
+  tarball_name="colx-${version}-x86_64-linux-gnu.tar.gz";
 elif [ "${platform}" == "darwin" ]; then
-  tarball_name="v${version}/colx-${version}-osx64.tar.gz";
+  tarball_name="colx-${version}-osx64.tar.gz";
 else
   echo "COLX binary distribution not available for platform and architecture"
   exit -1
 fi
 
-binary_url="${url}/${tarball_name}"
+binary_url="${url}/v${version}/${tarball_name}"
 shasums_url="${url}/SHA256SUMS.asc"
 
 download_bitcoind() {
