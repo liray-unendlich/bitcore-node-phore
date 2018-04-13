@@ -113,13 +113,4 @@ if [ "${verify}" = 1 ]; then
     verify_download
 fi
 
-if [ ! -f ./.bitcore/data/colx-cli ] && [ ! -f ./.bitcore/data/colx-cli.exe ]; then
-  echo "can't continue without colx-cli being installed!"
-  exit -1
-fi
-if [ ! -f ./.bitcore/data/colxd ] && [ ! -f ./.bitcore/data/colxd.exe ]; then
-  echo "can't continue without colxd being installed!"
-  exit -1
-fi
-
 exit 0
