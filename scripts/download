@@ -48,7 +48,7 @@ download_bitcoind() {
             echo "Unpacking colx distribution"
             tar -xvzf $tarball_name
             if test $? -eq 0; then
-                ln -sf "colxcore-${version}/bin/colxd"
+                #not needed: ln -sf "colxcore-${version}/bin/colxd"
                 return;
             fi
         fi
