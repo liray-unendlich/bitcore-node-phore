@@ -5,7 +5,7 @@ set -e
 root_dir="${HOME}/.bitcore"
 platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
-version="1.0.3"
+version="1.0.4"
 url="https://github.com/ColossusCoinXT/ColossusCoinXT/releases/download"
 
 if [ "${platform}" == "linux" ]; then
@@ -79,7 +79,8 @@ verify_download() {
     fi
 }
 
-download=1
+download=0
+#download=1
 verify=0
 
 if [ "${SKIP_BITCOIN_DOWNLOAD}" = 1 ]; then
