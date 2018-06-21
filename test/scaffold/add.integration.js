@@ -94,7 +94,7 @@ describe('#add', function() {
       var callCount = 0;
       var oldPackage = {
         dependencies: {
-          'bitcore-lib-colx': '^v0.13.17',
+          'colossuscore-lib': '^v0.13.17',
           'bitcore-node-colx': '^v0.2.0'
         }
       };
