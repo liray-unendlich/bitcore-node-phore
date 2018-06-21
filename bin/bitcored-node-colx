@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+var bitcored = require('../lib/cli/bitcored');
+bitcored();
