@@ -2,7 +2,7 @@
 
 var should = require('chai').should();
 var sinon = require('sinon');
-var bitcore = require('colossuscore-lib');
+var bitcore = require('bitcore-lib-colx');
 var Networks = bitcore.Networks;
 var proxyquire = require('proxyquire');
 var util = require('util');

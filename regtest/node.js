@@ -9,7 +9,7 @@ var log = index.log;
 log.debug = function() {};
 
 var chai = require('chai');
-var bitcore = require('colossuscore-lib');
+var bitcore = require('bitcore-lib-colx');
 var rimraf = require('rimraf');
 var node;
 
