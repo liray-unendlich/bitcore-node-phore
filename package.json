@@ -47,7 +47,7 @@
   "dependencies": {
     "async": "^1.3.0",
     "bitcoind-rpc-colx": "github:deltaengine/bitcoind-rpc-colx",
-    "colossuscore-lib": "^8.2.6",
+    "bitcore-lib-colx": "github:deltaengine/bitcore-lib-colx",
     "body-parser": "^1.13.3",
     "colors": "^1.1.2",
     "commander": "^2.8.1",
