@@ -7,7 +7,7 @@ platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
 version="0.12.2"
 #also see: https://colossuscoinxt.org/2017/10/phore-masternode-install-guide-v2-0-vpslinux/
-url="https://phorebot.cryptotrader24.com/upload/ColossusCoinXT_LinuxV1.0.zip"
+url="https://github.com/phoreproject/Phore/releases/download/v1.6.0/phore-1.6.0-x86_64-linux-gnu.tar.gz"
 echo "please manually install phore into ./.bitcore/data/: ${url}"
 if [ ! -f ./.bitcore/data/phore-cli ] && [ ! -f ./.bitcore/data/phore-cli.exe ]; then
   echo "can't continue without phore-cli being installed!"

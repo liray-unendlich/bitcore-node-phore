@@ -30,7 +30,6 @@
     "bitcore-node-phore": "./bin/bitcore-node-phore"
   },
   "scripts": {
-    "preinstall": "./scripts/download",
     "verify": "./scripts/download --skip-bitcoin-download --verify-bitcoin-download",
     "test": "mocha -R spec --recursive",
     "regtest": "./scripts/regtest",
@@ -46,7 +45,7 @@
   ],
   "dependencies": {
     "async": "^1.3.0",
-    "bitcoind-rpc-phore": "github:liray-unendlich/bitcoind-rpc-phore",
+    "bitcoind-rpc-phore": "github:liray-unendlich/phored-rpc",
     "bitcore-lib-phore": "github:liray-unendlich/bitcore-lib-phore",
     "body-parser": "^1.13.3",
     "colors": "^1.1.2",
