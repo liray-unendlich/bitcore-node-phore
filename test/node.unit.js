@@ -214,8 +214,8 @@ describe('Bitcore Node', function() {
       ];
       var order = node.getServiceOrder();
       order[0].name.should.equal('daemon');
-      order[2].name.should.equal('db');
-      order[3].name.should.equal('chain');
+      order[1].name.should.equal('db');
+      order[2].name.should.equal('chain');
     });
   });
 
