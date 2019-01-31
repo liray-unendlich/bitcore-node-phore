@@ -6,15 +6,15 @@ root_dir="${HOME}/.bitcore"
 platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
 version="0.12.2"
-#also see: https://colossuscoinxt.org/2017/10/colx-masternode-install-guide-v2-0-vpslinux/
-url="https://colxbot.cryptotrader24.com/upload/ColossusCoinXT_LinuxV1.0.zip"
-echo "please manually install colx into ./.bitcore/data/: ${url}"
-if [ ! -f ./.bitcore/data/colx-cli ] && [ ! -f ./.bitcore/data/colx-cli.exe ]; then
-  echo "can't continue without colx-cli being installed!"
+#also see: https://colossuscoinxt.org/2017/10/phore-masternode-install-guide-v2-0-vpslinux/
+url="https://phorebot.cryptotrader24.com/upload/ColossusCoinXT_LinuxV1.0.zip"
+echo "please manually install phore into ./.bitcore/data/: ${url}"
+if [ ! -f ./.bitcore/data/phore-cli ] && [ ! -f ./.bitcore/data/phore-cli.exe ]; then
+  echo "can't continue without phore-cli being installed!"
   exit -1
 fi
-if [ ! -f ./.bitcore/data/colxd ] && [ ! -f ./.bitcore/data/colxd.exe ]; then
-  echo "can't continue without colxd being installed!"
+if [ ! -f ./.bitcore/data/phored ] && [ ! -f ./.bitcore/data/phored.exe ]; then
+  echo "can't continue without phored being installed!"
   exit -1
 fi
 
@@ -23,7 +23,7 @@ fi
 #         tarball_name="ColossusCoinXT_LinuxV1.0.zip"
 #     fi
 # else
-#     echo "colx binary distribution not available for platform and architecture"
+#     echo "phore binary distribution not available for platform and architecture"
 #     exit -1
 # fi
 
@@ -37,7 +37,7 @@ fi
 
 #     cd "${root_dir}/data"
 
-#     echo "Downloading colx: ${binary_url}"
+#     echo "Downloading phore: ${binary_url}"
 
 #     is_curl=true
 #     if hash curl 2>/dev/null; then
@@ -56,20 +56,20 @@ fi
 #             wget $shasums_url
 #         fi
 #         if test -e "${tarball_name}"; then
-#             echo "Unpacking colx distribution"
+#             echo "Unpacking phore distribution"
 #             tar -xvzf $tarball_name
 #             if test $? -eq 0; then
-#                 ln -sf "colxcore-${version}/bin/colxd"
+#                 ln -sf "phorecore-${version}/bin/phored"
 #                 return;
 #             fi
 #         fi
 #     fi
-#     echo "colx binary distribution could not be downloaded"
+#     echo "phore binary distribution could not be downloaded"
 #     exit -1
 # }
 
 # verify_download() {
-#     echo "Verifying signatures of colx download"
+#     echo "Verifying signatures of phore download"
 #     gpg --verify "${root_dir}/bin/SHA256SUMS.asc"
 
 #     if hash shasum 2>/dev/null; then

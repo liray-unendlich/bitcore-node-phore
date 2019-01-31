@@ -6,7 +6,7 @@ var sinon = require('sinon');
 var proxyquire = require('proxyquire');
 
 describe('#defaultConfig', function() {
-  var expectedExecPath = path.resolve(__dirname, process.env.HOME, './.bitcore/data/colxd');
+  var expectedExecPath = path.resolve(__dirname, process.env.HOME, './.bitcore/data/phored');
 
   it('will return expected configuration', function() {
     var config = JSON.stringify({
@@ -29,7 +29,7 @@ describe('#defaultConfig', function() {
       fs: {
         existsSync: sinon.stub().returns(false),
         writeFileSync: function(path, data) {
-          path.should.equal(process.env.HOME + '/.bitcore/bitcore-node-colx.json');
+          path.should.equal(process.env.HOME + '/.bitcore/bitcore-node-phore.json');
           data.should.equal(config);
         },
         readFileSync: function() {
@@ -74,7 +74,7 @@ describe('#defaultConfig', function() {
       fs: {
         existsSync: sinon.stub().returns(false),
         writeFileSync: function(path, data) {
-          path.should.equal(process.env.HOME + '/.bitcore/bitcore-node-colx.json');
+          path.should.equal(process.env.HOME + '/.bitcore/bitcore-node-phore.json');
           data.should.equal(config);
         },
         readFileSync: function() {

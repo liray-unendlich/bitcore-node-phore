@@ -1,17 +1,17 @@
-Bitcore Node Colx
+Bitcore Node Phore
 ============
 
-A COLX full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. At the minimum a node has an interface to [COLX](https://github.com/ColossusCoinXT/ColossusCoinXT) for more advanced address queries. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
+A Phore full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. At the minimum a node has an interface to [Phore](https://github.com/ColossusCoinXT/ColossusCoinXT) for more advanced address queries. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
 
 ## Install
 
 ```bash
-npm install -g bitcore-node-colx
+npm install -g bitcore-node-phore
 ```
 
 ## Prerequisites
 
-- colx with support for additional indexing *(see above)*
+- phore with support for additional indexing *(see above)*
 - Node.js v0.10, v0.12, v4 or v5
 - ZeroMQ *(libzmq3-dev for Ubuntu/Debian or zeromq on OSX)*
 - ~1GB of disk storage
@@ -22,16 +22,16 @@ npm install -g bitcore-node-colx
 Bitcore includes a Command Line Interface (CLI) for managing, configuring and interfacing with your Bitcore Node.
 
 ```bash
-bitcore-node-colx create -d <colx-data-dir> mynode
+bitcore-node-phore create -d <phore-data-dir> mynode
 cd mynode
-bitcore-node-colx install <service>
-bitcore-node-colx install https://github.com/yourname/helloworld
-bitcore-node-colx start
+bitcore-node-phore install <service>
+bitcore-node-phore install https://github.com/yourname/helloworld
+bitcore-node-phore start
 ```
 
 This will create a directory with configuration files for your node and install the necessary dependencies.
 
-Please note that [COLX](https://github.com/ColossusCoinXT/ColossusCoinXT) will be downloaded automatically. Once completed the colxd binary should be placed into the &lt;colx-data-dir&gt; folder specified during node creation.
+Please note that [Phore](https://github.com/ColossusCoinXT/ColossusCoinXT) will be downloaded automatically. Once completed the phored binary should be placed into the &lt;phore-data-dir&gt; folder specified during node creation.
 
 For more information about (and developing) services, please see the [Service Documentation](docs/services.md).
 
@@ -39,9 +39,9 @@ For more information about (and developing) services, please see the [Service Do
 
 There are several add-on services available to extend the functionality of Bitcore:
 
-- [Insight API](https://github.com/colxpay/insight-api-colx/tree/master)
-- [Insight UI](https://github.com/colxpay/insight-ui-colx/tree/master)
-- [Bitcore Wallet Service](https://github.com/colxpay/bitcore-wallet-service/tree/master)
+- [Insight API](https://github.com/phorepay/insight-api-phore/tree/master)
+- [Insight UI](https://github.com/phorepay/insight-ui-phore/tree/master)
+- [Bitcore Wallet Service](https://github.com/phorepay/bitcore-wallet-service/tree/master)
 
 ## Documentation
 
@@ -60,7 +60,7 @@ Please send pull requests for bug fixes, code optimization, and ideas for improv
 
 ## License
 
-Code released under [the MIT license](https://github.com/bitpay/bitcore-node-colx/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/bitpay/bitcore-node-phore/blob/master/LICENSE).
 
 Copyright 2013-2015 BitPay, Inc.
 

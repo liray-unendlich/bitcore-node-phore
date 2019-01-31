@@ -1,13 +1,13 @@
 {
-  "name": "bitcore-node-colx",
-  "description": "Full node with extended capabilities using Bitcore and colx Core",
+  "name": "bitcore-node-phore",
+  "description": "Full node with extended capabilities using Bitcore and phore Core",
   "author": "BitPay <dev@bitpay.com>",
   "version": "3.0.6",
   "main": "./index.js",
-  "repository": "git://github.com/deltaengine/bitcore-node-colx.git",
-  "homepage": "https://github.com/deltaengine/bitcore-node-colx",
+  "repository": "git://github.com/deltaengine/bitcore-node-phore.git",
+  "homepage": "https://github.com/deltaengine/bitcore-node-phore",
   "bugs": {
-    "url": "https://github.com/deltaengine/bitcore-node-colx/issues"
+    "url": "https://github.com/deltaengine/bitcore-node-phore/issues"
   },
   "contributors": [
     {
@@ -27,7 +27,7 @@
     }
   ],
   "bin": {
-    "bitcore-node-colx": "./bin/bitcore-node-colx"
+    "bitcore-node-phore": "./bin/bitcore-node-phore"
   },
   "scripts": {
     "preinstall": "./scripts/download",
@@ -41,13 +41,13 @@
     "bitcoind_test": "./node_modules/.bin/mocha test/services/bitcoind.unit.js"
   },
   "tags": [
-    "colx",
-    "colxd"
+    "phore",
+    "phored"
   ],
   "dependencies": {
     "async": "^1.3.0",
-    "bitcoind-rpc-colx": "github:deltaengine/bitcoind-rpc-colx",
-    "bitcore-lib-colx": "github:deltaengine/bitcore-lib-colx",
+    "bitcoind-rpc-phore": "github:deltaengine/bitcoind-rpc-phore",
+    "bitcore-lib-phore": "github:deltaengine/bitcore-lib-phore",
     "body-parser": "^1.13.3",
     "colors": "^1.1.2",
     "commander": "^2.8.1",
