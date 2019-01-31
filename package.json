@@ -45,7 +45,7 @@
   ],
   "dependencies": {
     "async": "^1.3.0",
-    "bitcoind-rpc-phore": "github:liray-unendlich/phored-rpc",
+    "phored-rpc": "github:liray-unendlich/phored-rpc",
     "bitcore-lib-phore": "github:liray-unendlich/bitcore-lib-phore",
     "body-parser": "^1.13.3",
     "colors": "^1.1.2",

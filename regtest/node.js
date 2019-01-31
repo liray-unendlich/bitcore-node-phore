@@ -15,7 +15,7 @@ var node;
 
 var should = chai.should();
 
-var BitcoinRPC = require('bitcoind-rpc-phore');
+var BitcoinRPC = require('phored-rpc');
 var index = require('..');
 var Transaction = bitcore.Transaction;
 var BitcoreNode = index.Node;
@@ -77,7 +77,7 @@ describe('Node Functionality', function() {
         client = new BitcoinRPC({
           protocol: 'http',
           host: '127.0.0.1',
-          port: 30331,
+          port: 11772,
           user: 'bitcoin',
           pass: 'local321',
           rejectUnauthorized: false

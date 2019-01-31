@@ -2,12 +2,20 @@
 
 set -e
 
+mkdir ${HOME}/.bitcore
 root_dir="${HOME}/.bitcore"
 platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
 version="0.12.2"
 #also see: https://colossuscoinxt.org/2017/10/phore-masternode-install-guide-v2-0-vpslinux/
 url="https://github.com/phoreproject/Phore/releases/download/v1.6.0/phore-1.6.0-x86_64-linux-gnu.tar.gz"
+
+#Install phore daemon, cli
+wget ${url}
+tar -xvzf phore-1.6.0-x86_64-linux-gnu.tar.gz
+mv phore-1.6.0/bin/phore* ${root_dir}/data/
+
+#Check wheter phore daemon was installed
 echo "please manually install phore into ./.bitcore/data/: ${url}"
 if [ ! -f ./.bitcore/data/phore-cli ] && [ ! -f ./.bitcore/data/phore-cli.exe ]; then
   echo "can't continue without phore-cli being installed!"

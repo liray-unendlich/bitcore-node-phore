@@ -644,7 +644,7 @@ describe('Bitcoin Service', function() {
   });
 
   describe('#_wrapRPCError', function() {
-    it('will convert bitcoind-rpc-phore error object into JavaScript error', function() {
+    it('will convert phored-rpc error object into JavaScript error', function() {
       var bitcoind = new BitcoinService(baseConfig);
       var error = bitcoind._wrapRPCError({message: 'Test error', code: -1});
       error.should.be.an.instanceof(errors.RPCError);

@@ -17,7 +17,7 @@ var bitcoind;
 var should = chai.should();
 var assert = chai.assert;
 var sinon = require('sinon');
-var BitcoinRPC = require('bitcoind-rpc-phore');
+var BitcoinRPC = require('phored-rpc');
 var transactionData = [];
 var blockHashes = [];
 var utxos;
@@ -68,7 +68,7 @@ describe('Bitcoind Functionality', function() {
         client = new BitcoinRPC({
           protocol: 'http',
           host: '127.0.0.1',
-          port: 30331,
+          port: 11772,
           user: 'bitcoin',
           pass: 'local321',
           rejectUnauthorized: false

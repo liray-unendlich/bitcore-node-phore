@@ -1,7 +1,7 @@
 Bitcore Node Phore
 ============
 
-A Phore full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. At the minimum a node has an interface to [Phore](https://github.com/ColossusCoinXT/ColossusCoinXT) for more advanced address queries. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
+A Phore full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. At the minimum a node has an interface to [Phore](https://github.com/phoreproject/Phore) for more advanced address queries. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
 
 ## Install
 
@@ -31,7 +31,7 @@ bitcore-node-phore start
 
 This will create a directory with configuration files for your node and install the necessary dependencies.
 
-Please note that [Phore](https://github.com/ColossusCoinXT/ColossusCoinXT) will be downloaded automatically. Once completed the phored binary should be placed into the &lt;phore-data-dir&gt; folder specified during node creation.
+Please note that [Phore](https://github.com/phoreproject/Phore) will be downloaded automatically. Once completed the phored binary should be placed into the &lt;phore-data-dir&gt; folder specified during node creation.
 
 For more information about (and developing) services, please see the [Service Documentation](docs/services.md).
 
@@ -39,9 +39,9 @@ For more information about (and developing) services, please see the [Service Do
 
 There are several add-on services available to extend the functionality of Bitcore:
 
-- [Insight API](https://github.com/phorepay/insight-api-phore/tree/master)
-- [Insight UI](https://github.com/phorepay/insight-ui-phore/tree/master)
-- [Bitcore Wallet Service](https://github.com/phorepay/bitcore-wallet-service/tree/master)
+- [Insight API](https://github.com/liray-unendlich/insight-api-phore/tree/master)
+- [Insight UI](https://github.com/liray-unendlich/insight-ui-phore/tree/master)
+- [Bitcore Wallet Service](https://github.com/bitpay/bitcore-wallet-service/tree/master)
 
 ## Documentation
 

@@ -59,8 +59,8 @@ We now will setup symlinks in `bitcore-node-phore` *(repeat this for any other m
 cd node_modules
 rm -rf bitcore-lib
 ln -s ~/bitcore-lib
-rm -rf bitcoind-rpc-phore
-ln -s ~/bitcoind-rpc-phore
+rm -rf phored-rpc
+ln -s ~/phored-rpc
 ```
 
 And if you're compiling or developing bitcoin:
